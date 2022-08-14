@@ -1,0 +1,124 @@
+/* Html tags styling */
+body {
+    margin: 1rem 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+img {
+    width: 500px;
+}
+
+.selection-text {
+    letter-spacing: -0.5px;
+
+}
+
+.selection-tab {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: 0;
+    outline: none;
+    /* font-size: 1rem; */
+    text-align: center;
+    /* width: 202px; */
+    appearance: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Button styling */
+.btn {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 1.5rem 0;
+}
+
+.btn:after {
+    content: "";
+    background-color: #ffe54c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.btn:hover:after {
+    top: 0px;
+    left: 0px;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        padding: 13px 50px 13px;
+    }
+}
+
+/* Loader styling */
+.lds-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    /* border: 1px solid #333; */
+    transform: translateZ(1px);
+}
+
+.lds-circle>div {
+    display: inline;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    background: #ffe54c;
+    animation: lds-circle 3.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+@keyframes lds-circle {
+
+    0%,
+    100% {
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(800deg);
+        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+
+    100% {
+        transform: rotateY(1600deg);
+    }
+}
